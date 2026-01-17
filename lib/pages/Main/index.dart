@@ -1,4 +1,9 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:hm_shop/pages/Cart/index.dart';
+import 'package:hm_shop/pages/Category/index.dart';
+import 'package:hm_shop/pages/Home/index.dart';
+import 'package:hm_shop/pages/Mine/index.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -20,9 +25,9 @@ class _MainPageState extends State<MainPage> {
       "text":"分类",
     },
     {
-      "icon":"lib/assets/购物车.png",
+      "icon":"lib/assets/购物�?.png",
       "activeicon":"lib/assets/购物车选中.png",
-      "text":"购物车",
+      "text":"购物�?",
     },
     {
       "icon":"lib/assets/我的.png",
@@ -45,7 +50,7 @@ class _MainPageState extends State<MainPage> {
   int _currentIndex = 0;
 
   List<Widget> _getChildren(){
-    return[];
+    return[HomeView() , CategoryView() , CartView() , MineView()];
   }
 
   @override
