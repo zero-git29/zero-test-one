@@ -17,7 +17,7 @@ class _MainPageState extends State<MainPage> {
     {
       "icon":"lib/assets/首页.png",
       "activeicon":"lib/assets/首页-选中.png",
-      "text":"首页",
+      "text":"首页〉",
     },
     {
       "icon":"lib/assets/分类.png",
@@ -25,9 +25,9 @@ class _MainPageState extends State<MainPage> {
       "text":"分类",
     },
     {
-      "icon":"lib/assets/购物�?.png",
+      "icon":"lib/assets/购物车.png",
       "activeicon":"lib/assets/购物车选中.png",
-      "text":"购物�?",
+      "text":"购物车",
     },
     {
       "icon":"lib/assets/我的.png",
