@@ -17,7 +17,7 @@ class _MainPageState extends State<MainPage> {
     {
       "icon":"lib/assets/首页.png",
       "activeicon":"lib/assets/首页-选中.png",
-      "text":"首页〉",
+      "text":"首页",
     },
     {
       "icon":"lib/assets/分类.png",
