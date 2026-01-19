@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 class BannerItem {
   String id;
   String imgUrl;
@@ -7,3 +9,29 @@ class BannerItem {
   }
 }
 
+
+class CategoryItem {
+  String? id;
+  String? name;
+  String? picture;
+  List<CategoryItem>? children;
+  CategoryItem(
+    {
+      required this.id,
+      required this.name,
+      required this.picture,
+      this.children
+    }
+  ); 
+
+  factory CategoryItem.formJSON(Map<String , dynamic> json){
+    return CategoryItem(
+      id: json["id"] ?? " " , 
+      name: json["name"] ?? " ", 
+      picture: json["picture"]?? " ",
+      children: json["children"] == null
+          ? null
+          : (json["children"] as List).map((item)=>CategoryItem.formJSON(item as Map<String , dynamic>)).toList(),
+      );
+  }
+}
