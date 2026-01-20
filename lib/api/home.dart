@@ -14,3 +14,11 @@ Future<List<CategoryItem>> getCategoryListApi() async{
     return CategoryItem.formJSON(item as Map<String , dynamic>);
   }).toList();
 }
+
+
+
+Future<SpecialRecommendResult> getGoodListApi() async{
+  return SpecialRecommendResult.formJSON(
+    await dioRequest.get(HttpConstants.GOODS_LIST)
+  );
+}
