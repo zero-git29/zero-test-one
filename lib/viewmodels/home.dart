@@ -39,7 +39,7 @@ class CategoryItem {
 class GoodsItem {
   String id;
   String name;
-  String desc;
+  String? desc;
   String price;
   String picture;
   int orderNum;
@@ -47,7 +47,7 @@ class GoodsItem {
   GoodsItem({
     required this.id,
     required this.name,
-    required this.desc,
+    this.desc,
     required this.price,
     required this.picture,
     required this.orderNum,
@@ -84,7 +84,7 @@ class GoodsItems {
       pageSize: int.tryParse(json["pageSize"] ?.toString() ?? "0") ?? 0, 
       pages: int.tryParse(json["pages"] ?.toString() ?? "0") ?? 0, 
       page: int.tryParse(json["page"] ?.toString() ?? "0") ?? 0, 
-      items: (json["item"] as List? ?? [])
+      items: (json["items"] as List? ?? [])
             .map((item)=>GoodsItem.fromJSON(item as Map<String , dynamic>))
             .toList(),
     );
@@ -111,17 +111,17 @@ class SubType{
 class SpecialRecommendResult {
   String id;
   String title;
-  List<SubType> subType;
+  List<SubType> subTypes;
   SpecialRecommendResult({
     required this.id,
     required this.title,
-    required this.subType,
+    required this.subTypes,
   });
   factory SpecialRecommendResult.formJSON(Map<String , dynamic> json){
     return SpecialRecommendResult(
       id: json["id"]?.toString() ?? "",
       title: json["title"]?.toString() ?? "", 
-      subType: (json["subType"] as List? ?? [])
+      subTypes: (json["subTypes"] as List? ?? [])
               .map((item)=>SubType.formJSON(item as Map<String , dynamic>))
               .toList(),
     );

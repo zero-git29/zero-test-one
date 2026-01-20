@@ -12,8 +12,8 @@ class Hmsuggestion extends StatefulWidget {
 class _HmsuggestionState extends State<Hmsuggestion> {
 
   List<GoodsItem> _getDisplayItem(){
-    if (widget.specialRecommendResult.subType.isEmpty) return[];
-    return widget.specialRecommendResult.subType.first.goodsItems.items.take(3).toList();
+    if (widget.specialRecommendResult.subTypes.isEmpty) return[];
+    return widget.specialRecommendResult.subTypes.first.goodsItems.items.take(3).toList();
   }
 
   Widget _buildHeader(){
@@ -37,7 +37,7 @@ class _HmsuggestionState extends State<Hmsuggestion> {
   }
   List<Widget> _getChildrenList (){
     List<GoodsItem> list = _getDisplayItem();
-    return List.generate(3, (int index) {
+    return List.generate(list.length, (int index) {
       return Column(
         children: [
           ClipRRect(

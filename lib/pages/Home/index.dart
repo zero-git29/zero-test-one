@@ -19,7 +19,7 @@ class _HomeViewState extends State<HomeView> {
   SpecialRecommendResult _specialRecommendResult = SpecialRecommendResult(
     id: "", 
     title: "", 
-    subType: []
+    subTypes: []
   );
   List<CategoryItem> _categoryList = [];
   List<BannerItem> _bannerList = [];
