@@ -22,3 +22,15 @@ Future<SpecialRecommendResult> getGoodListApi() async{
     await dioRequest.get(HttpConstants.GOODS_LIST)
   );
 }
+
+Future<SpecialRecommendResult> getHotListApi() async{
+  return SpecialRecommendResult.formJSON(
+    await dioRequest.get(HttpConstants.HOT_LIST)
+  );
+}
+
+Future<SpecialRecommendResult> getOneStopListApi() async{
+  return SpecialRecommendResult.formJSON(
+    await dioRequest.get(HttpConstants.ONESTOP_LIST)
+  );
+}
