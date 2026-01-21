@@ -10,4 +10,5 @@ class HttpConstants{
   static const String GOODS_LIST = "/hot/preference";
   static const String HOT_LIST = "/hot/inVogue";
   static const String ONESTOP_LIST = "/hot/oneStop";
+  static const String RECOMMEND_LIST = "/home/recommend";
 }

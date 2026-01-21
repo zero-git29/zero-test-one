@@ -47,8 +47,8 @@ class _HmhotState extends State<Hmhot> {
             child: Image.network(
               errorBuilder: (context, error, stackTrace) {
                 return Container(
-                  width: 100,
-                  height: 140,
+                  width: 80,
+                  height: 100,
                   color: Colors.black,
                 );
               },
