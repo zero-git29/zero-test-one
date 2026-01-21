@@ -82,13 +82,14 @@ class _HmmorelistState extends State<Hmmorelist> {
   @override
   Widget build(BuildContext context) {
     return SliverGrid.builder(
+    itemCount: widget.RecommendList.length,
     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 2,
       mainAxisSpacing: 10,
       crossAxisSpacing: 10,
       childAspectRatio: 0.75
       ), 
-    itemBuilder: (BuildContext context , int index){
+    itemBuilder: (BuildContext context , int index){  
       return Padding(
         padding: EdgeInsets.symmetric(horizontal: 10),
         child: _getChildren(index),
