@@ -78,7 +78,7 @@ class _HomeViewState extends State<HomeView> {
       Future.microtask((){
         _paddingTop = 100;
         setState(() {});
-        _key.currentState?.show();
+        _key.currentState?.show();//执行下拉刷新
         });
     }
 
